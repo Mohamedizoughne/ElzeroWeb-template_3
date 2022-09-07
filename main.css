@@ -256,7 +256,10 @@ header li a {
     }
 
     header .nav li {
-        padding: 10px 5px;
+        padding: 10px 3px;
+        font-size: 8px;
+        text-align: center;
+        word-spacing: -5px;
     }
 
     header li a {
@@ -284,10 +287,6 @@ header .nav .mega-menu {
     padding: 30px;
     border-bottom: 4px solid var(--main-color);
 }
-
-/* header .nav .other-links:hover+.mega-menu {
-    display: grid;
-} */
 
 .mega-menu .links li a {
     font-size: 1.4rem;
@@ -341,17 +340,20 @@ header .nav .mega-menu {
 }
 
 @media (max-width: 991px) {
-    header .nav .other-links:hover+.mega-menu {
+    header .nav .mega-menu {
         grid-template-columns: 100%;
     }
 
     header .nav .mega-menu .image {
         display: none;
     }
-
 }
 
 @media (max-width: 767px) {
+    .mega-menu {
+        margin-top: 15px;
+    }
+
     .nav .mega-menu .links {
         display: flex;
         flex-direction: column;
@@ -1607,6 +1609,8 @@ header .nav .mega-menu {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     background-image: url(/imgs/stats.jpg);
+    background-position: cover;
+
     position: relative;
 }
 
@@ -1666,17 +1670,18 @@ header .nav .mega-menu {
 }
 
 .stats .stats-title {
-    display: inline-block;
     position: relative;
     z-index: 5;
-    margin-left: 50%;
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 40px;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    font-size: 24px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .stats .stats-title {
+        font-size: 38px;
+    }
 }
 
 .stats .container>div h3 {

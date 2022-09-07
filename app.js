@@ -19,7 +19,14 @@ const landing = document.querySelector(".landing");
 const header = document.querySelector("header");
 
 linksBtn.addEventListener("click", function appear() {
-    megaMenu.style.display = "grid";
+    // megaMenu.style.display = "grid";
+    if (megaMenu.style.display === "grid") {
+        megaMenu.style.display = "none";
+    } else {
+        megaMenu.style.display = "grid";
+    }
+
+
     landing.onclick = function () {
         megaMenu.style.display = "none";
     };
