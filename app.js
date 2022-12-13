@@ -29,5 +29,18 @@ linksBtn.addEventListener("click", function appear() {
 
     landing.onclick = function () {
         megaMenu.style.display = "none";
-    };
-});
+    }
+})
+
+// Animate Width On Scrolling
+
+window.addEventListener('scroll', () => {
+    const skillsSectionOffsetY = document.getElementById('skills').getBoundingClientRect().y
+    const skillsFill = document.querySelectorAll('.web-skills .fill')
+
+    if (skillsSectionOffsetY < window.innerHeight * (4/5)) {
+        skillsFill.forEach(ele => {
+            ele.style.width = ele.getAttribute('data-fill')
+        })
+    }
+})

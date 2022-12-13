@@ -1073,25 +1073,12 @@ header .nav .mega-menu {
     content: '80%';
 }
 
-.skills .full .some {
+.skills .full .fill {
     background-color: var(--main-color);
     height: 100%;
-}
-
-.skills .full.html .some {
-    width: 80%;
-}
-
-.skills .full.css .some {
-    width: 85%;
-}
-
-.skills .full.js .some {
-    width: 70%;
-}
-
-.skills .full.py .some {
-    width: 80%;
+    transition-duration: 1s;
+    width: 0;
+    transform-origin: left;
 }
 
 @media (max-width: 767px) {
