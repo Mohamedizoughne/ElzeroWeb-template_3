@@ -31,7 +31,6 @@ linksBtn.addEventListener("click", function appear() {
         megaMenu.style.display = "none";
     }
 })
-
 // Animate Width On Scrolling
 
 window.addEventListener('scroll', () => {
@@ -41,6 +40,27 @@ window.addEventListener('scroll', () => {
     if (skillsSectionOffsetY < window.innerHeight * (4/5)) {
         skillsFill.forEach(ele => {
             ele.style.width = ele.getAttribute('data-fill')
+        })
+    }
+})
+// JavaScript Countdown 
+
+window.addEventListener('scroll', () => {
+    const eventsSectionOffsetY = document.getElementById('events').getBoundingClientRect().y
+    const timeUnits = document.querySelectorAll('.timer h3')
+
+    if (eventsSectionOffsetY < window.innerHeight * (4/5)) {
+        timeUnits.forEach(ele => {
+            let i = ele.innerText
+            const limit = ele.getAttribute('data-time')
+            
+            let interval = setInterval(() => {
+                if(i <= limit) {
+                    ele.innerText = i++
+                } else {
+                    clearInterval(interval)
+                }
+            }, 3000 / limit)
         })
     }
 })
