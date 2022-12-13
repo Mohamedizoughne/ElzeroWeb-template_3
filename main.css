@@ -192,15 +192,13 @@ header {
 }
 
 header .logo {
-    max-height: 100px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+    padding: 10px;
+    color: var(--main-color);
+    font-size: 1.8rem;
+    font-family: 'Rubik Spray Paint', cursive;
+    font-weight: normal;
 }
 
-header .logo img {
-    max-width: 160px;
-}
 
 header .nav {
     display: flex;
@@ -433,6 +431,8 @@ header .nav .mega-menu {
 .landing .intro h3 {
     margin-bottom: 10px;
     font-size: 2.5rem;
+    font-family: 'Rubik Spray Paint', cursive;
+    font-weight: normal;
 }
 
 .landing .intro p {
