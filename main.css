@@ -191,10 +191,15 @@ header {
     border-bottom: 1px solid #ececec;
 }
 
-header>h4.logo {
-    padding: 10px;
-    color: var(--main-color);
-    font-size: 1.8rem;
+header .logo {
+    max-height: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 160px;
 }
 
 header .nav {
@@ -500,16 +505,35 @@ header .nav .mega-menu {
     color: #777;
     padding: 15px 20px;
     line-height: 1.6;
+    border-bottom: rgba(119, 119, 119, 0.26) solid 1px;
 }
 
 .box .details a {
     display: block;
+    position: relative;
     color: var(--main-color);
-    border-top: rgba(119, 119, 119, 0.26) solid 1px;
     padding-top: 15px;
     padding-left: 15px;
     font-weight: bold;
+    width: fit-content;
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
 }
+
+@media (min-width: 768px) {
+    .box:hover .details a {
+        transform: translateX(2px);
+        -webkit-transform: translateX(2px);
+        -moz-transform: translateX(2px);
+        -ms-transform: translateX(2px);
+        -o-transform: translateX(2px);
+    }
+}
+
+
 
 /* -------------------Gallery Section -------------- */
 .gallery {
@@ -1176,7 +1200,7 @@ header .nav .mega-menu {
     position: absolute;
     width: 150px;
     height: 150px;
-    background-image: url(/imgs/dots.png);
+    background-image: url(imgs/dots.png);
     z-index: -5;
 }
 
@@ -1608,7 +1632,7 @@ header .nav .mega-menu {
 .stats {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
-    background-image: url(/imgs/stats.jpg);
+    background-image: url(imgs/stats.jpg);
     background-position: cover;
 
     position: relative;
